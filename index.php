@@ -2,7 +2,7 @@
 <html lang="en">
     
     <head>
-        <title>FGL Merchandising Conference 2015</title>
+        <title>FGL Merchandising Conference 2016</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <link href="css/bootstrap.css" rel="stylesheet" media="screen">
         <style>
@@ -31,7 +31,7 @@
 		
         <form class="form-horizontal" id="regform">
             <fieldset>
-                <h3>Merchandising Conference 2015 <span>April 5 - 7, 2016</span><span>Rimrock Hotel &amp; Resort &nbsp;&nbsp;&nbsp; Banff, AB</span> <span class="reg">Registration</span></h3>
+                <h3>Merchandising Conference 2016 <span>April 5 - 7, 2016</span><span>Rimrock Hotel &amp; Resort &nbsp;&nbsp;&nbsp; Banff, AB</span> <span class="reg">Registration</span></h3>
 				<br />
 				<br />				
             <div class="form-group">
