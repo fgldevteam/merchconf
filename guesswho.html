@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <title>FGL Leadership Conference</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link href="css/bootstrap.css" rel="stylesheet" media="screen">
+        <style>
+        body{background-color: #333; color: #fff;}
+        legend{color: #fff; border: 0;}
+        em{color: #468847;}
+        .error{color: #c00; font-size: 12px;}
+        .container{padding-top: 20px; width: 680px; margin: 0 auto;}
+        img.speaker, canvas{  background-color: #000; width: 480px; margin-left: 100px; border: 5px solid white;}
+        .speaker{}
+        #canvas{display: none;}
+        
+/*
+		img { 
+			width:480px; 
+			filter: 		blur(50px); 
+			-webkit-filter: blur(50px); 
+			-moz-filter: 	blur(50px);
+			-o-filter: 		blur(50px); 
+			-ms-filter: 	blur(50px);
+			filter: url(blur.svg#blur);
+			filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='3');
+		}
+*/
+		
+		img.blurone { 
+			width:480px; 
+			filter: 		blur(50px); 
+			-webkit-filter: blur(50px); 
+			-moz-filter: 	blur(50px);
+			-o-filter: 		blur(50px); 
+			-ms-filter: 	blur(50px);
+			filter: url(blur.svg#blur-one);
+			filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='50');
+		}
+		
+		img.blurtwo { 
+			width:480px; 
+			filter: 		blur(25px); 
+			-webkit-filter: blur(25px); 
+			-moz-filter: 	blur(25px);
+			-o-filter: 		blur(25px); 
+			-ms-filter: 	blur(25px);
+			filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='25');
+			filter: url(blur.svg#blur-two); 
+		}	
+		
+		img.blurthree { 
+			width:480px; 
+			filter: 		blur(10px); 
+			-webkit-filter: blur(10px); 
+			-moz-filter: 	blur(10px);
+			-o-filter: 		blur(10px); 
+			-ms-filter: 	blur(10px);
+			filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='10');
+			filter: url(blur.svg#blur-three); 
+		}			
+		
+		.clues{ width: 680px; margin: 0 auto; }	
+		h1, h4, button{text-align: center;}
+		button{ display: block; width: 100px; margin: 0 auto;}
+		.hidden{ display: none;}
+        </style>
+    </head>
+    <body onload="setupimage();">
+	
+	<div class="container">
+	 <h3><img src="images/logo2.png" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Can you guess our guest speaker?</h3>
+
+	 <img src="speaker-50.jpg" class="speaker" id="speakerid" />
+	 
+	  <div id="canvasHolder">
+	    
+	  	<canvas  id="canvas"></canvas>
+	  </div>
+	 	
+	 	<div class="clues">
+	 	<h1 class="clue">Clue: </h1>
+	 	<h4 class="clue1">Born July 19, 1975 in Consett, England</h4>
+	 	<h4 class="clue2 hidden">Was head coach of a national team in New Zealand before coming to Canada.</h4>
+	 	<h4 class="clue3 hidden">Won an Olympic bronze medal in 2012</h4>
+	 	<h4 class="answer hidden">John Herdman, coach of the Canadian Women's Soccer Team</h4>
+	 	
+	 	
+	 	<button type="button" class="button1" onclick="slidetwo();">&raquo; Next Clue!</button>
+	 	<button type="button" class="button2 hidden" onclick="slidethree();">&raquo; Next Clue!</button>
+	 	<button type="button" class="button3 hidden" onclick="reveal();">&raquo; Next Clue!</button>
+	 	</div>
+	</div>
+	
+	
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+   <filter id="blur-one">
+       <feGaussianBlur stdDeviation="50" />
+   </filter>
+
+   <filter id="blur-two">
+       <feGaussianBlur stdDeviation="25" />
+   </filter>
+
+   <filter id="blur-three">
+       <feGaussianBlur stdDeviation="10" />
+   </filter>
+</svg> 
+        
+        <script src="http://code.jquery.com/jquery.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+		<script src="js/jquery.ez-bg-resize.js"></script>
+        <script src="js/StackBlur.js"></script>
+		<script>
+		$(document).ready(function() {
+		    $("body").ezBgResize({
+		        img : "images/chalkboard.jpeg"
+		    });
+		});
+		</script>	    
+	
+		<script>
+		function setupimage(){
+			//stackBlurImage( "speakerid", "canvas", 50, false );
+			
+		}
+		
+		function slidetwo(){
+		//	stackBlurImage( "speakerid", "canvas", 25, false );
+			$( "img.speaker" ).replaceWith( ' <img src="speaker-25.jpg" class="speaker" id="speakerid" />' );		
+			$(".clue1").toggleClass("hidden"); //hide clue 1
+			$(".button1").toggleClass("hidden"); //hide button 1
+			$(".clue2").toggleClass("hidden"); //show clue2
+			$(".button2").toggleClass("hidden"); //show button2
+
+			
+/*
+			$(".speaker").removeClass( "blurone" );
+			$(".speaker").addClass("blurtwo");	
+*/
+		}
+		function slidethree(){
+			$( "img.speaker" ).replaceWith( ' <img src="speaker-10.jpg" class="speaker" id="speakerid" />' );		
+//			stackBlurImage( "speakerid", "canvas", 10, false );
+			$(".clue2").toggleClass("hidden"); //hide clue 1
+			$(".button2").toggleClass("hidden"); //hide button 1
+			$(".clue3").toggleClass("hidden"); //show clue2
+			$(".button3").toggleClass("hidden"); //show button2
+
+/*
+			$(".speaker").removeClass( "blurtwo" );
+			$(".speaker").addClass("blurthree");
+*/	
+		}		
+		
+		function reveal(){
+			$( "img.speaker" ).replaceWith( ' <img src="speaker.jpg" class="speaker" id="speakerid" />' );		
+//			stackBlurImage( "speakerid", "canvas", 0, false );
+			$(".clue3").toggleClass("hidden"); //hide clue 1
+			$(".button3").toggleClass("hidden"); //hide button 1
+			$(".answer").toggleClass("hidden"); //show clue2
+/* 			$(".speaker").removeClass( "blurthree" ); */
+
+			$( "h1.clue" ).replaceWith( "<h1>John Herdman</h1>" );
+		}				
+		</script>
+	    
+    </body>
+</html>

@@ -1,0 +1,16 @@
+# suppress PHP errors from displaying in the browser
+php_flag display_startup_errors off
+php_flag display_errors off
+php_flag html_errors off
+
+# log PHP errors to a file
+php_flag log_errors on
+php_value error_reporting 32767
+php_value error_log "/home/51258/users/.home/domains/merch.thecompleteexperience.ca/html/logs/error.log"
+
+
+#AuthType Basic
+#AuthName "protected area"
+#AuthUserFile /home/51258/.htpasswd
+#AuthGroupFile /home/51258/.htgroup
+#Require user merch
