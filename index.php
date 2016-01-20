@@ -15,7 +15,7 @@
         em{color: #468847;}
         .error{color: #c00; font-size: 12px;}
         .container{padding-top: 20px;}
-        h3{ margin-bottom: 20px; text-transform: uppercase; font-size: 40px; font-family: GalaxiePolarisCondensed-Bold; background: url('images/tag.png') top left no-repeat; height: 195px; padding-left: 195px; padding-top: 10px;}
+        h3{ margin-bottom: 20px; text-transform: uppercase; font-size: 40px; font-family: GalaxiePolarisCondensed-Bold; background: url('images/tag_2016.png') top left no-repeat; height: 195px; padding-left: 195px; padding-top: 10px;}
         h3 span {font-family: GalaxiePolarisCondensed-Light; display: block; font-size: 30px;}
         h3 span.reg{font-family: GalaxiePolarisCondensed-Book; display: block; padding-top: 5px; font-size: 35px;}
         .declinelabel{ font-family: GalaxiePolarisCondensed-Book; font-size: 16px; text-transform: uppercase;}
@@ -31,7 +31,7 @@
 		
         <form class="form-horizontal" id="regform">
             <fieldset>
-                <h3>Merchandising Conference 2015 <span>April 14 - 16, 2015</span><span>Rimrock Hotel &amp; Resort &nbsp;&nbsp;&nbsp; Banff, AB</span> <span class="reg">Registration</span></h3>
+                <h3>Merchandising Conference 2015 <span>April 5 - 7, 2016</span><span>Rimrock Hotel &amp; Resort &nbsp;&nbsp;&nbsp; Banff, AB</span> <span class="reg">Registration</span></h3>
 				<br />
 				<br />				
             <div class="form-group">
