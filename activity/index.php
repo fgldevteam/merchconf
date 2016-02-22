@@ -84,7 +84,7 @@
 			$result = mysql_query($q) or die ("Error in query: $q. ".mysql_error());
 			
 			$climbingtotal = 25;
-			$spintotal = 13;
+			$spintotal = 14;
 			$yogatotal = 20;
 			$crossfittotal = 15;
 			$basketballtotal = 20;
@@ -223,7 +223,7 @@
 
           	<tr>
 	          	<td class="select-td"><input class="checkbox" name="activity" type="checkbox" id="activity-crossfit" value="crossfit"<?php if($crossfittotal == 0) { echo " disabled";} ?> /></td>
-	          	<td>Cross-fit (1 Hours)</td>
+	          	<td>Cross-fit (1 Hour)</td>
 	          	<!-- <td>Crossfit Banff</td> -->
 	          	<td><?=$crossfittotal?> spots remaining</td>
 	          	<td>Appropriate clean footwear and gym apparel</td>	          		          		          		          	
@@ -234,7 +234,7 @@
 	          	<td>Zumba (1 Hour)</td>
 	          	<!-- <td>Crossfit Banff</td> -->
 	          	<td><?=$zumbatotal?> spots remaining</td>
-	          	<td>Appropriate footwear and gym apparel</td>	          		          		          		          	
+	          	<td>Appropriate clean footwear and gym apparel</td>	          		          		          		          	
           	</tr>          	
           	
        	          	
@@ -287,7 +287,7 @@
             
             <div class="form-group">
                 <div class="col-lg-8">
-                	<p class="pull-left">Transport from the conference hotel to The Banff Centre will be provided. </p>
+                	<p class="pull-left">Transport from the conference hotel to the activities will be provided. </p>
 					<!-- <span class="pull-right declinelabel"> <input type="checkbox" name="decline" id="deline" value="decline">&nbsp;&nbsp;Decline invitation to conference </span> -->
                 </div>            
                 <div class="col-lg-3 pull-right">
