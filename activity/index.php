@@ -14,15 +14,15 @@
         legend{color: #fff; border: 0;}
         em{color: #468847;}
         .error{color: #c00; font-size: 12px;}
-        .container{padding-top: 20px;}
+        .container{padding-top: 20px; margin-top: 10px;}
         h2{ font-size: 40px; font-family: GalaxiePolarisCondensed-Book; text-transform: uppercase; padding-right: 20px;}
         h4{ font-size: 25px; font-family: GalaxiePolarisCondensed-Light; text-transform: uppercase;}  
         h4 strong{ font-family: GalaxiePolarisCondensed-Book; font-weight: bold;}      
-        h3{ margin-bottom: 20px; text-transform: uppercase; font-size: 40px; font-family: GalaxiePolarisCondensed-Bold; background: url('/images/tag.png') top left no-repeat; height: 195px; padding-left: 195px; padding-top: 10px;}
+        h3{ margin-bottom: 20px; text-transform: uppercase; font-size: 40px; font-family: GalaxiePolarisCondensed-Bold; background: url('/images/tag_2016.png') top left no-repeat; height: 195px; padding-left: 195px; padding-top: 10px;}
         h3 span {font-family: GalaxiePolarisCondensed-Light; display: block; font-size: 30px;}
         h3 span.reg{font-family: GalaxiePolarisCondensed-Book; display: block; padding-top: 5px; font-size: 35px;}
         .declinelabel{ font-family: GalaxiePolarisCondensed-Book; font-size: 16px; text-transform: uppercase;}
-		.container{ width: 650px !important; padding: 0px 20px; background: transparent url('/images/bg4.png') 0px 10px repeat; }
+		.container{ width: 650px !important; padding: 0px 20px; background: transparent url('/images/bg4.png') 0px 0px repeat; }
 		label{ font-size: 12px !important; font-weight: normal !important;}
 		
 		#act-title{ padding-left: 20px; padding-bottom: 15px;}
@@ -43,7 +43,7 @@
 		
         <form class="form-horizontal" id="regform">
             <fieldset>
-                <h3>Merchandising Conference 2015 <span>April 14 - 16, 2015</span><span>Rimrock Hotel &amp; Resort &nbsp;&nbsp;&nbsp; Banff, AB</span> 
+                <h3>Merchandising Conference 2016 <span>April 5 - 7, 2016</span><span>Rimrock Hotel &amp; Resort &nbsp;&nbsp;&nbsp; Banff, AB</span> 
 									<span class="reg">Activity Selection</span></h3>
 				<br />
 				<br />
@@ -80,15 +80,16 @@
 			$connection = mysql_connect($host, $user, $pass) or die ("Unable to connect!");
 			mysql_select_db($db) or die ("Unable to select database!"); 
 			
-			
 			$q = "SELECT activity1, COUNT(*) AS `num`, activity2, COUNT(*) AS `num2` FROM activities GROUP BY activity1 ORDER BY activity1";
 			$result = mysql_query($q) or die ("Error in query: $q. ".mysql_error());
 			
 			$climbingtotal = 25;
-			$spintotal = 14;
+			$spintotal = 13;
 			$yogatotal = 20;
 			$crossfittotal = 15;
 			$basketballtotal = 20;
+			$zumbatotal = 15;
+			$hiketotal = 25;
 					
 			while ($row = mysql_fetch_array($result, MYSQL_NUM)) {
 			
@@ -113,6 +114,14 @@
 					case "basketball":
 						$basketballtotal = $basketballtotal - $row[1];
 						break;		
+
+					case "zumba":
+						$zumbatotal = $zumbatotal - $row[1];
+						break;	
+
+					case "hike":
+						$hiketotal = $hiketotal - $row[1];
+						break;															
 					
 				}
 				
@@ -167,15 +176,15 @@
           	<tr>
           		<th class="select-td"></th>
 	          	<th>Activity</th>
-			  	<th>Location</th>
+<!-- 			  	<th>Location</th> -->
 			  	<th>Capacity</th>			  	
 			  	<th>What to Bring</th>			  	
           	</tr>
           	
           	<tr>
 	          	<td class="select-td"><input class="checkbox" name="activity" type="checkbox" id="activity-climbing" value="climbing"<?php if($climbingtotal == 0) { echo " disabled";} ?> /></td>
-	          	<td>Climbing (2 Hours)</td>
-	          	<td>The Banff Centre Climbing Gym</td>
+	          	<td>Climbing (1.5 Hours)</td>
+	          	<!-- <td>The Banff Centre Climbing Gym</td> -->
 	          	<td><?=$climbingtotal?> spots remaining</td>
 	          	<td>All equipment provided (including shoes - can wear own clean runners if preferred). Wear clothes that are easy to move/stretch in (remember others will be looking up at you). Bring a water bottle.</td>	          		          		          		          	
           	</tr>
@@ -183,34 +192,52 @@
           	<tr>
 	          	<td class="select-td"><input class="checkbox" name="activity" type="checkbox" id="activity-spin" value="spin"<?php if($spintotal == 0) { echo " disabled";} ?> /></td>
 	          	<td>Spin Class (1 Hour)</td>
-	          	<td>The Banff Centre Spin Class Room</td>
+	          	<!-- <td>The Banff Centre Spin Class Room</td> -->
 	          	<td><?=$spintotal?> spots remaining</td>
-	          	<td>Appropriate clean footwear, a water bottle and gym apparel</td>	          		          		          		          	
+	          	<td>Appropriate clean footwear and gym apparel</td>	          		          		          		          	
           	</tr>
           	
           	<tr>
 	          	<td class="select-td"><input class="checkbox" name="activity" type="checkbox" id="activity-yoga" value="yoga"<?php if($yogatotal == 0) { echo " disabled";} ?> /></td>
 	          	<td>Yoga (1 Hour)</td>
-	          	<td>Fenlands Banff Recreation Centre</td>
+	          	<!-- <td>Fenlands Banff Recreation Centre</td> -->
 	          	<td><?=$yogatotal?> spots remaining</td>
-	          	<td>Yoga mat, a water bottle and apparel</td>	          		          		          		          	
+	          	<td>Yoga mat and apparel</td>	          		          		          		          	
           	</tr>
 
           	<tr>
-	          	<td class="select-td"><input class="checkbox" name="activity" type="checkbox" id="activity-crossfit" value="crossfit"<?php if($crossfittotal == 0) { echo " disabled";} ?> /></td>
-	          	<td>Cross-fit (1.5 Hours)</td>
-	          	<td>Crossfit Banff</td>
-	          	<td><?=$crossfittotal?> spots remaining</td>
-	          	<td>Appropriate clean footwear, a water bottle and gym apparel</td>	          		          		          		          	
-          	</tr>
-          	
-          	<tr>
 	          	<td class="select-td"><input class="checkbox" name="activity" type="checkbox" id="activity-basketball" value="basketball"<?php if($basketballtotal == 0) { echo " disabled";} ?> /></td>
-	          	<td>Basketball (2 Hours)</td>
-	          	<td>The Banff Centre Gymnasium</td>
+	          	<td>Basketball (1.5 Hours)</td>
+	          	<!-- <td>The Banff Centre Gymnasium</td> -->
 	          	<td><?=$basketballtotal?> spots remaining</td>
-	          	<td>Appropriate clean footwear, a water bottle and gym apparel</td>	          		          		          		          	
-          	</tr>          	          	
+	          	<td>Appropriate clean footwear and gym apparel</td>	          		          		          		          	
+          	</tr>       
+
+			<tr>
+	          	<td class="select-td"><input class="checkbox" name="activity" type="checkbox" id="activity-hike" value="hike"<?php if($hiketotal == 0) { echo " disabled";} ?> /></td>
+	          	<td>Hike (1.5 Hour)</td>
+	          	<!-- <td>Crossfit Banff</td> -->
+	          	<td><?=$hiketotal?> spots remaining</td>
+	          	<td>Appropriate footwear and outdoor apparel</td>	          		          		          		          	
+          	</tr> 
+
+          	<tr>
+	          	<td class="select-td"><input class="checkbox" name="activity" type="checkbox" id="activity-crossfit" value="crossfit"<?php if($crossfittotal == 0) { echo " disabled";} ?> /></td>
+	          	<td>Cross-fit (1 Hours)</td>
+	          	<!-- <td>Crossfit Banff</td> -->
+	          	<td><?=$crossfittotal?> spots remaining</td>
+	          	<td>Appropriate clean footwear and gym apparel</td>	          		          		          		          	
+          	</tr>
+
+          	<tr>
+	          	<td class="select-td"><input class="checkbox" name="activity" type="checkbox" id="activity-zumba" value="zumba"<?php if($zumbatotal == 0) { echo " disabled";} ?> /></td>
+	          	<td>Zumba (1 Hour)</td>
+	          	<!-- <td>Crossfit Banff</td> -->
+	          	<td><?=$zumbatotal?> spots remaining</td>
+	          	<td>Appropriate footwear and gym apparel</td>	          		          		          		          	
+          	</tr>          	
+          	
+       	          	
           	          	          	
           </table>
           
