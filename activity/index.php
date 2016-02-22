@@ -2,7 +2,7 @@
 <html lang="en">
     
     <head>
-        <title>FGL Merchandising Conference 2015</title>
+        <title>FGL Merchandising Conference 2016</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <link href="/css/bootstrap.css" rel="stylesheet" media="screen">
         <style>
