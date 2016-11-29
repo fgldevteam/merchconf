@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-    
+
     <head>
-        <title>FGL Merchandising Conference 2016</title>
+        <title>FGL Merchandising Conference 2017</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <link href="css/bootstrap.css" rel="stylesheet" media="screen">
         <style>
-		@font-face { font-family: GalaxiePolarisCondensed-Book.; src: url('/fonts/GalaxiePolarisCondensed-Book.otf'); } 
+		@font-face { font-family: GalaxiePolarisCondensed-Book.; src: url('/fonts/GalaxiePolarisCondensed-Book.otf'); }
 		@font-face { font-family: GalaxiePolarisCondensed-Bold; font-weight: bold; src: url('/fonts/GalaxiePolarisCondensed-Bold.otf'); }
-		@font-face { font-family: GalaxiePolarisCondensed-Light; font-weight: bold; src: url('/fonts/GalaxiePolarisCondensed-Light.otf'); }        
+		@font-face { font-family: GalaxiePolarisCondensed-Light; font-weight: bold; src: url('/fonts/GalaxiePolarisCondensed-Light.otf'); }
       /*   body{background: #fff url('images/grey.png') top left repeat; color: #333;} */
       	body{ color: #fff; }
         legend{color: #fff; border: 0;}
@@ -25,65 +25,50 @@
     </head>
 
     <body>
-     
-            
+
+
     <div class="container">
-		
+
         <form class="form-horizontal" id="regform">
             <fieldset>
-                <h3>Merchandising Conference 2016 <span>April 5 - 7, 2016</span><span>Rimrock Hotel &amp; Resort &nbsp;&nbsp;&nbsp; Banff, AB</span> <span class="reg">Registration</span></h3>
+                <h3>Merchandising Conference 2017 <span>April 25 - 27, 2016</span><span>Rimrock Hotel &amp; Resort &nbsp;&nbsp;&nbsp; Banff, AB</span> <span class="reg">Registration</span></h3>
 				<br />
-				<br />				
+				<br />
             <div class="form-group">
                 <label for="firstname" class="col-2 control-label">First Name</label>
                 <div class="col-8">
                     <input type="text" name="firstname" class="form-control" id="firstname" placeholder="First Name">
                 </div>
             </div>
-                
+
             <div class="form-group">
                 <label for="lastname" class="col-lg-2 control-label">Last Name</label>
                 <div class="col-lg-8">
                     <input type="text" name="lastname" class="form-control" id="lastname" placeholder="Last Name">
                 </div>
             </div>
-         
+
 
             <div class="form-group">
-                <label for="email" class="col-lg-2 control-label">Email</label>
+                <label for="email" class="col-lg-2 control-label">Work Email</label>
                 <div class="col-lg-8">
                     <input type="text" name="email" class="form-control" id="email" placeholder="Email Address">
                 </div>
-            </div> 
+            </div>
 
             <div class="form-group">
-                <label for="phone" class="col-lg-2 control-label">Cell Phone</label>
+                <label for="phone" class="col-lg-2 control-label">Phone</label>
                 <div class="col-lg-8">
-                    <input type="text" name="phone" class="form-control" id="phone" placeholder="Cell Phone Number">
+                    <input type="text" name="phone" class="form-control" id="phone" placeholder="Phone Number">
                 </div>
-            </div>                        
+            </div>
 
-            <div class="form-group">
-                <label for="office" class="col-lg-2 control-label">Department</label>
-                <div class="col-lg-8">
-                    <select name="office" id="office" class="form-control">
-                        <option value="">Select Your Department</option>    
-                        <option value="hardgoods">Hardgoods</option>    
-                        <option value="softgoods">Softgoods</option> 
-                        <option value="footwear">Footwear</option>  
-						<option value="planning">Planning</option> 
-						<option value="allocation">Allocation &amp; Replenishment</option>
-						<option value="other">Other</option> 
-                    </select>
-                </div>
-            </div>  
-        
             <div class="form-group">
                 <label for="diet" class="col-lg-2 control-label">Dietary Restrictions</label>
                 <div class="col-lg-8">
                     <input type="text" name="diet" class="form-control" id="diet" placeholder="Dietary Needs/Restrictions or Allergies">
                 </div>
-            </div>   
+            </div>
 
 
             <div class="form-group">
@@ -92,21 +77,9 @@
                     <input type="text" name="roommate" class="form-control" id="roommate" placeholder="Roommate Request">
 <!--                     <small><em>Please Note: All AVPs will be sharing rooms, no exceptions</em></small> -->
                 </div>
-            </div>  
-            
-            <div class="form-group">
-                <label for="emergency-name" class="col-lg-2 control-label">Emergency  Name</label>
-                <div class="col-lg-3">
-                    <input type="text" name="emergency-name" class="form-control" id="emergency-name" placeholder="Contact Name">
-<!--                     <small><em>Please Note: All AVPs will be sharing rooms, no exceptions</em></small> -->
-                </div>
-                
-                <label for="emergency-number" class="col-lg-2 control-label">Emergency Phone</label>
-                <div class="col-lg-3">
-                    <input type="text" name="emergency-number" class="form-control" id="emergency-number" placeholder="Contact Number">
-<!--                     <small><em>Please Note: All AVPs will be sharing rooms, no exceptions</em></small> -->
-                </div>                
-            </div>               
+            </div>
+
+
 
 <!--
             <div class="form-group">
@@ -115,7 +88,7 @@
                     <p>
                     Will you require travel arrangements?
                     <input type="radio" name="flights" value="yes"> Yes
-                    <input type="radio" name="flights" value="no"> No 
+                    <input type="radio" name="flights" value="no"> No
                     <br /><small><em>Please Note: Flights to Calgary will be arranged in advance</em></small>
                     </p>
 
@@ -127,9 +100,9 @@
 
 
                 </div>
-            </div>  
--->             
-<!--                
+            </div>
+-->
+<!--
             <div class="form-group">
                 <label for="phone" class="col-lg-2 control-label">Activity</label>
                 <div class="col-lg-8">
@@ -139,15 +112,15 @@
                     <br /><input type="radio" name="activity" value="Hiking"> Hiking
                     <br /><input type="radio" name="activity" value="Mountain Biking"> Mountain Biking
                     <br /><input type="radio" name="activity" value="Scotch Tasting"> Scotch Tasting
-                    <br /><input type="radio" name="activity" value="Ultimate Frisbee"> Ultimate Frisbee 
+                    <br /><input type="radio" name="activity" value="Ultimate Frisbee"> Ultimate Frisbee
                     <br id="activity" />
                     </p>
                 </div>
-            </div>                 
-    -->     
+            </div>
+    -->
             <div class="form-group">
                 <label for="phone" class="col-lg-2 control-label">Sizes</label>
-                <div class="col-lg-3">
+                <div class="col-lg-2">
                     <p>Shirt</p>
                     <select name="shirtsize" id="shirtsize" class="form-control">
                         <option value="">Please Choose</option>
@@ -162,7 +135,22 @@
                         <option value="W-XL">Women's X-Large</option>
                     </select>
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-2">
+                    <p>Pants</p>
+                    <select name="pantsize" id="pantsize" class="form-control">
+                        <option value="">Please Choose</option>
+                        <option value="M-S">Men's Small</option>
+                        <option value="M-M">Men's Medium</option>
+                        <option value="M-L">Men's Large</option>
+                        <option value="M-XL">Men's X-Large</option>
+                        <option value="M-XXL">Men's XX-Large</option>
+                        <option value="W-S">Women's Small</option>
+                        <option value="W-M">Women's Medium</option>
+                        <option value="W-L">Women's Large</option>
+                        <option value="W-XL">Women's X-Large</option>
+                    </select>
+                </div>
+                <div class="col-lg-2">
                     <p>Jacket</p>
                     <select name="jacketsize" id="jacketsize" class="form-control">
                         <option value="">Please Choose</option>
@@ -176,8 +164,8 @@
                         <option value="W-L">Women's Large</option>
                         <option value="W-XL">Women's X-Large</option>
                     </select>
-                </div>    
-                <div class="col-lg-3">
+                </div>
+                <div class="col-lg-2">
                     <p>Shoes</p>
                     <select name="shoesize" id="shoesize" class="form-control">
                         <option value="">Please Choose</option>
@@ -193,7 +181,7 @@
                         <option value="M-11.5">Men's 11.5</option>
                         <option value="M-12">Men's 12</option>
                         <option value="M-12.5">Men's 12.5</option>
-                        <option value="M-13">Men's 13</option>                        
+                        <option value="M-13">Men's 13</option>
                         <option value="W-6">Women's 6</option>
                         <option value="W-6.5">Women's 6.5</option>
                         <option value="W-7">Women's 7</option>
@@ -206,20 +194,20 @@
                         <option value="W-10.5">Women's 10.5</option>
                         <option value="W-11">Women's 11</option>
                         <option value="W-11.5">Women's 11.5</option>
-                        <option value="W-12">Women's 12</option> 
+                        <option value="W-12">Women's 12</option>
                     </select>
-                </div>                                
+                </div>
             </div>
-                   
+
             <div class="form-group">
 
             </div>
-            
+
             <div class="form-group">
                 <div class="col-lg-8">
                 	<p class="pull-right">Busses will be arranged to depart from Head Office to the Hotel and back to Calgary.</p>
 					<!-- <span class="pull-right declinelabel"> <input type="checkbox" name="decline" id="deline" value="decline">&nbsp;&nbsp;Decline invitation to conference </span> -->
-                </div>            
+                </div>
                 <div class="col-lg-3">
 	                <div id="sendemail"></div>
                     <button type="submit" id="submit" class="btn btn-success pull-right">Send Registration</button>
@@ -227,8 +215,8 @@
             </div>
             </fieldset>
         </form>
-    </div>    
-        
+    </div>
+
         <script src="http://code.jquery.com/jquery.js"></script>
         <script src="js/bootstrap.min.js"></script>
 		<script src="js/jquery.ez-bg-resize.js"></script>
