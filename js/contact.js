@@ -62,11 +62,11 @@ $(document).ready(function() {
 			$(window).scrollTop(0);
 		}
 
-		if(officeVal == '') {
-			$("#office").after('<span class="error">Please select your department.</span>');
-			hasError = true;
-			$(window).scrollTop(0);
-		}
+		// if(officeVal == '') {
+		// 	$("#office").after('<span class="error">Please select your department.</span>');
+		// 	hasError = true;
+		// 	$(window).scrollTop(0);
+		// }
 
 /*
 		if(activityVal == null) {
